@@ -30,10 +30,9 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `clientes`;
 CREATE TABLE IF NOT EXISTS `clientes` (
   `ID` int NOT NULL AUTO_INCREMENT,
-  `DNI` char(8) NOT NULL,
+  `DNI` char(9) NOT NULL,
   `nombre` varchar(255) NOT NULL,
-  `primer_apellido` varchar(255) NOT NULL,
-  `segundo_apellido` varchar(255) NOT NULL,
+  `apellidos` varchar(255) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
   `email` varchar(255) NOT NULL,
   `ciudad` varchar(255) NOT NULL,
@@ -44,8 +43,15 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 -- Volcado de datos para la tabla `clientes`
 --
 
-INSERT INTO `clientes` (`ID`, `DNI`, `nombre`, `primer_apellido`, `segundo_apellido`, `fecha_nacimiento`, `email`, `ciudad`) VALUES
-(1, '55555555', 'Carlos', 'Ramirez', 'Martinez', '1999-08-08', 'carlosramirezmartinez01@gmail.com', 'Madrid');
+INSERT INTO `clientes` (`ID`, `DNI`, `nombre`, `apellidos`, `fecha_nacimiento`, `email`, `ciudad`) VALUES
+(1, '55555555R', 'Carlos', 'Ramirez Martinez', '1999-08-08', 'carlosramirezmartinez01@gmail.com', 'Madrid');
+(2, '55555555K', 'Benito', 'Ramirez Perez', '1993-02-01', 'benito3@gmail.com', 'Murcia');
+(3, '55555555L', 'Laura', 'Pons Pinto', '1988-07-08', 'laurita01@gmail.com', 'Sevilla');
+(4, '55555555M', 'Emily', 'Almeida', '2000-12-08', 'lamili0000@gmail.com', 'Madrid');
+(5, '55555567Y', 'Eduardo', 'Criado Martinez', '1986-08-12', 'educr7@gmail.com', 'Madrid');
+(6, '66666664K', 'Enrique', 'Pastor Martinez', '1950-02-02', 'concejal@gmail.com', 'Malaga');
+(7, '12345677J', 'Santiago', 'Abascal Martinez', '1978-08-08', 'santivox@gmail.com', 'Madrid');
+(8, '88888888U', 'Pedro', 'Sanchez Sanchez', '1980-08-08', 'pedropsoe@gmail.com', 'Madrid');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
