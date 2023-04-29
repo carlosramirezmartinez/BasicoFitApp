@@ -37,6 +37,6 @@ else {
 
 
 // Llamo a la función seleccionada
-$procRuta();
+//$procRuta();
 
 
