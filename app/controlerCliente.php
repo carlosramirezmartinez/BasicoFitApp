@@ -23,3 +23,13 @@ include_once 'Cliente.php';
         die(" No implementado.");
          //require_once './app/plantilla/detallesPlantilla.php';
     }
+
+    function ctlClienteVerClientes(){
+          // Obtengo los datos del modelo
+        $peliculas = ModeloClienteDB::GetAll();
+        // Invoco la vista 
+        include_once 'plantilla/verclientes.php';
+
+    }
+
+    

@@ -5,9 +5,9 @@ include_once 'app/modeloCliente.php';
 include_once 'app/Cliente.php';
 
 // Inicializo el modelo 
-ModeloPeliDB::Init();
+ModeloClienteDB::Init();
 
-//echo "index ok";
+echo "index ok";
 
 $rutasClientes = [
     "Alta"        => "ctlClienteAlta",
