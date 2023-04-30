@@ -26,7 +26,7 @@ include_once 'Cliente.php';
 
     function ctlClienteVerClientes(){
           // Obtengo los datos del modelo
-        $peliculas = ModeloClienteDB::GetAll();
+        $clientes = ModeloClienteDB::GetAll();
         // Invoco la vista 
         include_once 'plantilla/verclientes.php';
 

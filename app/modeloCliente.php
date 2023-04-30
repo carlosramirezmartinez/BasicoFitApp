@@ -52,8 +52,8 @@ public static function GetAll ():array{
     
     $tclientes = [];
     $stmt->setFetchMode(PDO::FETCH_CLASS, 'Cliente');
-    while ( $cliente = $stmt->fetch()){
-        $tclientes[] = $cliente;       
+    while ( $clientes = $stmt->fetch()){
+        $tclientes[] = $clientes;       
     }
     return $tclientes;
 }

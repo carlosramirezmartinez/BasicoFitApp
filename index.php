@@ -7,7 +7,6 @@ include_once 'app/Cliente.php';
 // Inicializo el modelo 
 ModeloClienteDB::Init();
 
-echo "index ok";
 
 $rutasClientes = [
     "Alta"        => "ctlClienteAlta",
@@ -28,11 +27,13 @@ if (isset($_GET['orden'])){
         echo '<html><body><h1>Error 404: No existe la ruta <i>' .
             $_GET['ctl'] .
             '</p></body></html>';
+            echo "OK";
             exit;
     }
 }
 else {
     $procRuta = "ctlClienteVerClientes";
+    echo "KO";
 }
 
 
