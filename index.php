@@ -3,6 +3,7 @@
 include_once 'app/config.php';
 include_once 'app/modeloCliente.php'; 
 include_once 'app/Cliente.php';
+include_once 'app/controlerCliente.php';
 
 // Inicializo el modelo 
 ModeloClienteDB::Init();
@@ -13,7 +14,7 @@ $rutasClientes = [
     "Detalles"    => "ctlClienteDetalles",
     "Modificar"   => "ctlClienteModificar",
     "Borrar"      => "ctlClienteBorrar",
-    "VerClientes"    => "ctlClienteVerClientes",
+    "VerClientes"    => "ctlClienteVerClientes"
 ];
 
 if (isset($_GET['orden'])){
@@ -27,17 +28,15 @@ if (isset($_GET['orden'])){
         echo '<html><body><h1>Error 404: No existe la ruta <i>' .
             $_GET['ctl'] .
             '</p></body></html>';
-            echo "OK";
             exit;
     }
 }
 else {
     $procRuta = "ctlClienteVerClientes";
-    echo "KO";
 }
 
 
 // Llamo a la función seleccionada
-//$procRuta();
+$procRuta();
 
 
