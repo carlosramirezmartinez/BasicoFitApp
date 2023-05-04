@@ -2,8 +2,8 @@
 
 class Cliente
 {
-   private $id;
-   private $dni;
+   private $ID;
+   private $DNI;
    private $nombre;
    private $apellidos;
    private $fecha_nacimiento;

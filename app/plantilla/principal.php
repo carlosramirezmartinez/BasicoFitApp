@@ -42,9 +42,9 @@
     <th>Email</th>
 	<?php foreach ($clientes as $cli) : ?>
     <tr>
-            <td><?= $cli->id ?></td>
+            <td><?= $cli->ID ?></td>
             <td><?= $cli->nombre ?></td>
-            <td><?= $cli->dni ?></td>
+            <td><?= $cli->DNI ?></td>
             <td><?= $cli->fecha_nacimiento?></td>
             <td><?= $cli->email ?></td>
     </tr>
