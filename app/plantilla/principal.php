@@ -48,9 +48,9 @@
             <td><?= $cli->fecha_nacimiento?></td>
             <td><?= $cli->email ?></td>
             <!--Borrar intentar boton de confirmado por seguridad-->
-            <td><a href="#" onclick="confirmarBorrar('<?= $cli->nombre . "','" . $cli->id . "'" ?>);">Borrar</a></td>
-            <td><a href="<?= $auto ?>?orden=Modificar&codigo=<?= $cli->id ?>">Modificar</a></td>
-            <td><a href="<?= $auto ?>?orden=Detalles&codigo=<?= $cli->id ?>">Detalles</a></td>
+            <td><a href="#" onclick="confirmarBorrar('<?= $cli->nombre . "','" . $cli->ID. "'" ?>);">Borrar</a></td>
+            <td><a href="<?= $auto ?>?orden=Modificar&codigo=<?= $cli->ID ?>">Modificar</a></td>
+            <td><a href="<?= $auto ?>?orden=Detalles&codigo=<?= $cli->ID ?>">Detalles</a></td>
 
     </tr>
 		<!--<div class="card" style="width: 18rem;"></div>
@@ -59,6 +59,7 @@
   </table>
 	
 </div>
+
 
 </html>
 

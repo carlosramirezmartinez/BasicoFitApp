@@ -12,14 +12,14 @@ $auto = $_SERVER['PHP_SELF'];
 <?php foreach ($clientes as $cli) : ?>
 
     <tr>
-		<td><?= $cli->id ?></td>
-		<td><?= $cli->dni ?></td>
+		<td><?= $cli->ID ?></td>
+		<td><?= $cli->DNI ?></td>
 		<td><?= $cli->nombre ?></td>
 		<td><?= $cli->apellidos ?></td>
     <td><?= $cli->fecha_nacimiento ?></td>
     <td><?= $cli->email ?></td>
     <td><?= $cli->ciudad?></td>
-			
+    
 
 <?php endforeach; ?>
 

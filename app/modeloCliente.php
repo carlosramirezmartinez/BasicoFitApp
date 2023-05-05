@@ -58,5 +58,17 @@ public static function GetAll ():array{
     return $tclientes;
 }
 
+//Borrar boton
+
+public static function ClienteDel($id)
+{
+    $stmt = self::$dbh->prepare(self::$delete_cliente);
+    $stmt->bindValue(1, $id);
+    $stmt->execute();
+    if ($stmt->rowCount() > 0) {
+        return true;
+    }
+    return false;
+}
 
 }//Fin clase

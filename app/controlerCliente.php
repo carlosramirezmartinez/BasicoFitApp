@@ -10,12 +10,20 @@ include_once 'Cliente.php';
     }
     
     function ctlClienteModificar(){
-        die(" No implementado.");
-         //require_once './app/plantilla/modificarPlantilla.php';
+        if ( isset($_GET['codigo'])){
+            $codigo = $_GET['codigo'];
+            include_once 'plantilla/modificarPlantilla.php';
+        }
+         
     }
 
     function ctlClienteBorrar(){
-        die(" No implementado.");
+        
+    $codigo = $_GET['id'];
+    $clientes = ModeloClienteDB::ClienteDel($codigo);
+
+
+    header('Location: index.php');
          //require_once './app/plantilla/borrarPlantilla.php';
     }
 
