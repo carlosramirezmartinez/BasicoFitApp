@@ -28,8 +28,12 @@ include_once 'Cliente.php';
     }
 
     function ctlClienteDetalles(){
-        die(" No implementado.");
-         //require_once './app/plantilla/detallesPlantilla.php';
+          if ( isset($_GET['codigo'])){
+              $codigo = $_GET['codigo'];
+              $clientes = ModeloClienteDB::GetOne($codigo); 
+              include_once 'plantilla/detallesPlantilla.php';
+          }
+
     }
 
     function ctlClienteVerClientes(){

@@ -58,6 +58,24 @@ public static function GetAll ():array{
     return $tclientes;
 }
 
+//Un usuario para detalles
+public static function GetOne ($codigo){
+    // Genero los datos para la vista de index
+    //Sentencia preparada mostrar películas
+    $stmt = self::$dbh->prepare(self::$consulta_cliente);
+    $stmt->bindValue(1, $codigo);
+    $stmt->execute();
+
+    if ($stmt->rowCount() > 0) {
+        // Obtengo un objeto de tipo Usuario, pero devuelvo una tabla
+        // Para no tener que modificar el controlador
+        $stmt->setFetchMode(PDO::FETCH_CLASS, 'Cliente');
+
+        $uobj = $stmt->fetch();
+        return $uobj;
+    }
+    return null;
+}
 //Borrar cliente
 
 public static function ClienteDel($id)
@@ -77,4 +95,5 @@ public static function ClienteMod($id)
 
     
 }
+
 }//Fin clase
