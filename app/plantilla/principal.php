@@ -48,7 +48,7 @@
             <td><?= $cli->fecha_nacimiento?></td>
             <td><?= $cli->email ?></td>
             <!--Borrar intentar boton de confirmado por seguridad-->
-            <td><a href="#" onclick="confirmarBorrar('<?= $cli->nombre . "','" . $cli->ID. "'" ?>);">Borrar</a></td>
+            <td><a href="#" onclick="confirmarBorrar('<?= $cli->nombre . "','" . $cli->ID. "'" ?>');">Borrar</a></td>
             <td><a href="<?= $auto ?>?orden=Modificar&codigo=<?= $cli->ID ?>">Modificar</a></td>
             <td><a href="<?= $auto ?>?orden=Detalles&codigo=<?= $cli->ID ?>">Detalles</a></td>
 
