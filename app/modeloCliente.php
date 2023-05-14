@@ -58,7 +58,7 @@ public static function GetAll ():array{
     return $tclientes;
 }
 
-//Borrar boton
+//Borrar cliente
 
 public static function ClienteDel($id)
 {
@@ -71,4 +71,10 @@ public static function ClienteDel($id)
     return false;
 }
 
+//Modificar cliente
+public static function ClienteMod($id)
+{
+
+    
+}
 }//Fin clase
